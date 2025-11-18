@@ -1,1 +1,308 @@
+:root {
+    --color-fondo: #212121;
+    --color-acento: #FF7043;
+    --color-texto: #F5F5F5;
+    --color-cajas: #2a2a2a;
+    --color-borde: #444;
+    --fuente-principal: 'Poppins', sans-serif;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-acento);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+img {
+    max-width: 100%;
+    height: 400px;
+    display: block;
+}
+
+.header-principal {
+    background-color: var(--color-fondo);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--color-borde);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    letter-spacing: 0.5px;
+}
+
+.nav-principal a {
+    color: var(--color-texto);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.nav-principal a:hover {
+    color: var(--color-texto);
+    border-bottom-color: var(--color-acento);
+}
+
+.nav-principal a.activo {
+    color: var(--color-acento);
+    font-weight: 700;
+    border-bottom-color: var(--color-acento);
+}
+
+.seccion-layout {
+    padding: 5rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.seccion-layout:last-of-type {
+    border-bottom: none;
+}
+
+.seccion-oscura {
+    background-color: #1a1a1a;
+}
+
+.seccion-layout h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-texto);
+}
+
+.seccion-descripcion {
+    font-size: 1.1rem;
+    color: #CCC;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+.btn-ticket {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: var(--color-fondo);
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-inicio {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.hero-titulo {
+    font-size: 3.5rem;
+    color: #FFF;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitulo {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #DDD;
+    margin-bottom: 2rem;
+}
+
+.galeria-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.galeria-tarjeta {
+    background-color: var(--color-cajas);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    overflow: hidden;
+    flex-basis: 320px;
+    flex-grow: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease;
+}
+
+.galeria-tarjeta .tarjeta-info {
+    padding: 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.galeria-tarjeta h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.galeria-tarjeta p {
+    font-size: 0.95rem;
+    color: #CCC;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.enlace-tarjeta {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.lista-artistas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.artista-item {
+    text-align: center;
+    flex-basis: 300px;
+}
+
+.artista-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem auto;
+    border: 3px solid var(--color-borde);
+}
+
+.artista-item h3 {
+    font-size: 1.3rem;
+    color: var(--color-acento);
+}
+
+.tickets-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.ticket-tipo {
+    background-color: var(--color-cajas);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 2rem;
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+.precio {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-acento);
+    margin-bottom: 1rem;
+}
+
+.formulario-contacto {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-grupo {
+    margin-bottom: 1.5rem;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #CCC;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--color-cajas);
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    outline: none;
+    border-color: var(--color-acento);
+}
+
+.footer-principal {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 0;
+    border-top: 1px solid var(--color-borde);
+    background-color: #1a1a1a;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.footer-principal p {
+    margin-bottom: 0.5rem;
+}
